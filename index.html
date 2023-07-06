@@ -12,7 +12,7 @@
     </header>
     <main>
       <div class="opponent">
-        <h4>Choose an opponent</h4>
+        <h3>Choose an opponent</h3>
         <div class="opponentChoice">
           <label for="opponentHuman">You vs Human</label>
           <input type="checkbox" id="opponentHuman" />
@@ -23,20 +23,44 @@
           <input type="checkbox" id="opponentAi" />
         </div>
 
-        <button class="start">Start Game</button>
+        <button class="start">Enter Player's name</button>
+      </div>
+
+      <div class="playerDetailsModal">
+        <form action="">
+          <div>
+            <label for="player1">Player 1</label>
+            <input type="text" id="player1" />
+          </div>
+
+          <div>
+            <label for="player2">Player 2</label>
+            <input type="text" id="player2" />
+          </div>
+
+          <!-- <div>
+            <label for="ai">AI</label>
+            <input type="text" id="ai" />
+          </div> -->
+
+          <button class="start">Start game</button>
+        </form>
       </div>
 
       <div id="gameboardWrapper">
         <div id="gameboard">
-          <div class="box">x</div>
-          <div class="box">o</div>
-          <div class="box">x</div>
-          <div class="box">o</div>
-          <div class="box">x</div>
-          <div class="box">o</div>
-          <div class="box">x</div>
-          <div class="box">o</div>
-          <div class="box">x</div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div class="startNew">
+          <button class="start">Start New Game</button>
         </div>
       </div>
     </main>

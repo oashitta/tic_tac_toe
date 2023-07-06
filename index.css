@@ -15,6 +15,7 @@ header {
   margin-top: 16px;
   margin-bottom: 24px;
 }
+
 .opponent {
   display: flex;
   flex-direction: column;
@@ -42,9 +43,17 @@ label {
   background-color: #edbb3e;
 }
 
+.playerDetailsModal {
+  margin: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 #gameboardWrapper {
   /* display: none; */
 }
+
 #gameboard {
   display: grid;
   justify-content: center;
@@ -70,4 +79,10 @@ label {
   background-color: #6a833f;
   color: #fff;
   box-shadow: 3px 3px #354120;
+}
+
+.startNew {
+  display: flex;
+  justify-content: center;
+  margin: 24px 0;
 }
