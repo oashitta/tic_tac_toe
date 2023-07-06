@@ -3,10 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Tic Tac Toe</title>
     <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
+    <header>
+      <h1>Welcome to Tic Tac Toe</h1>
+    </header>
+    <main>
+      <div class="opponent">
+        <h4>Choose an opponent</h4>
+        <div class="opponentChoice">
+          <label for="opponentHuman">You vs Human</label>
+          <input type="checkbox" id="opponentHuman" />
+        </div>
+
+        <div class="opponentChoice">
+          <label for="opponentAi"> You vs AI</label>
+          <input type="checkbox" id="opponentAi" />
+        </div>
+
+        <button class="start">Start Game</button>
+      </div>
+
+      <div id="gameboardWrapper">
+        <div id="gameboard">
+          <div class="box">x</div>
+          <div class="box">o</div>
+          <div class="box">x</div>
+          <div class="box">o</div>
+          <div class="box">x</div>
+          <div class="box">o</div>
+          <div class="box">x</div>
+          <div class="box">o</div>
+          <div class="box">x</div>
+        </div>
+      </div>
+    </main>
     <script src="/index.js"></script>
   </body>
 </html>
