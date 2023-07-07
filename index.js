@@ -22,9 +22,13 @@ const Gameboard = (() => {
     render();
   };
 
+  // the only purpose of this function is to return the gameboard. it cannot be modified. also known as an accessor function.
+  const getGameboard = () => gameboard;
+
   return {
     render,
     update,
+    getGameboard,
   };
 })();
 
@@ -57,19 +61,34 @@ const Game = (() => {
     // console.log(event);
     // split to separate the string. parseInt to change the the string 1 into an integer
     let index = parseInt(event.target.id.split("-")[1]);
-    console.log(index);
-    Gameboard.update(index, players[currentPlayerIndex].mark);
+    // console.log(index);
+    if (Gameboard.getGameboard()[index] !== "") return;
 
+    Gameboard.update(index, players[currentPlayerIndex].mark);
     // handles the change from player to player 2
     currentPlayerIndex = currentPlayerIndex === 0 ? 1 : 0;
   };
+
+  const restart = () => {
+    for (let i = 0; i < 9; i++) {
+      Gameboard.update(i, "");
+    }
+    Gameboard.render();
+  };
+
   return {
     start,
     handleClick,
+    restart,
   };
 })();
 
 const startGame = document.querySelector("#start-game");
 startGame.addEventListener("click", () => {
   Game.start();
+});
+
+const restartGame = document.querySelector("#restart-game");
+restartGame.addEventListener("click", () => {
+  Game.restart();
 });
