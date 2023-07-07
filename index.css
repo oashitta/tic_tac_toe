@@ -5,8 +5,14 @@
 }
 
 body {
-  background-color: #bab78c;
+  /* background-color: #ece7ad; */
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(210, 210, 113),
+    #91ab4c
+  );
   font-family: "Lobster", cursive;
+  height: 100vh;
 }
 
 header {
@@ -18,13 +24,9 @@ header {
   margin-bottom: 24px;
 }
 
-/* .start {
-  background-color: #daa520;
-  width: 30%;
-  padding: 16px;
-  border: none;
-  border-radius: 4px;
-} */
+h1 {
+  text-shadow: 2px 2px 5px rgb(14, 109, 14);
+}
 
 .start:hover {
   background-color: #edbb3e;
