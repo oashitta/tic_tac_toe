@@ -1,3 +1,12 @@
+const displayWinner = (() => {
+  const showWinner = (message) => {
+    document.querySelector("#message").innerHTML = message;
+  };
+  return {
+    showWinner,
+  };
+})();
+
 // Gameboard module - an IIFE - to create variables that are private.
 const Gameboard = (() => {
   // store gameboard as an array inside a Gameboard Object.
@@ -84,6 +93,10 @@ const Game = (() => {
   const handleClick = (event) => {
     // alert("Clicked");
     // console.log(event);
+
+    if (gameOver) {
+      return;
+    }
     // split to separate the string. parseInt to change the the string 1 into an integer
     let index = parseInt(event.target.id.split("-")[1]);
     // console.log(index);
@@ -95,17 +108,10 @@ const Game = (() => {
       checkForWin(Gameboard.getGameboard(), players[currentPlayerIndex].mark)
     ) {
       gameOver = true;
-
-      // let winner = "";
-      // document.querySelector("#winner").innerHTML = winner;
-      // if (gameOver === true) {
-      //   winner = `${players[currentPlayerIndex].name} won!`;
-      // }
-
-      alert(`${players[currentPlayerIndex].name} won!`);
+      displayWinner.showWinner(`${players[currentPlayerIndex].name} wins!`);
     } else if (checkForTie(Gameboard.getGameboard())) {
       gameOver = true;
-      alert("it's a tie. try again?");
+      displayWinner.showWinner("it's a tie. try again?");
     }
 
     // handles the change from player to player 2
