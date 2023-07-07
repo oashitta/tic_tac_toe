@@ -16,8 +16,15 @@ const Gameboard = (() => {
     });
   };
 
+  const update = (index, value) => {
+    gameboard[index] = value;
+    // when value is inputed, we want to render the gameboard with the updated values.
+    render();
+  };
+
   return {
     render,
+    update,
   };
 })();
 
@@ -50,7 +57,11 @@ const Game = (() => {
     // console.log(event);
     // split to separate the string. parseInt to change the the string 1 into an integer
     let index = parseInt(event.target.id.split("-")[1]);
-    // console.log(index);
+    console.log(index);
+    Gameboard.update(index, players[currentPlayerIndex].mark);
+
+    // handles the change from player to player 2
+    currentPlayerIndex = currentPlayerIndex === 0 ? 1 : 0;
   };
   return {
     start,
