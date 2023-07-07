@@ -12,19 +12,9 @@ header {
   display: flex;
   justify-content: center;
   height: 20%;
-  margin-top: 16px;
+  margin-top: 32px;
+  padding: 16px;
   margin-bottom: 24px;
-}
-
-.opponent {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* width: 50%; */
-}
-
-.opponentChoice {
-  margin: 8px 0px;
 }
 
 .start {
