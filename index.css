@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: rgb(186, 183, 140);
+  background-color: #bab78c;
 }
 
 header {
@@ -27,10 +27,6 @@ header {
   margin: 8px 0px;
 }
 
-label {
-  margin: 0 16px;
-}
-
 .start {
   background-color: #daa520;
   width: 30%;
@@ -41,10 +37,6 @@ label {
 
 .start:hover {
   background-color: #edbb3e;
-}
-
-#gameboardWrapper {
-  /* display: none; */
 }
 
 #gameboard {
