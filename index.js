@@ -123,6 +123,8 @@ const Game = (() => {
       Gameboard.update(i, "");
     }
     Gameboard.render();
+    gameOver = false;
+    document.querySelector("#message").innerHTML = "";
   };
 
   return {
