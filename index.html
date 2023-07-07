@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tic Tac Toe</title>
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <!-- css file -->
     <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
@@ -11,59 +19,111 @@
       <h1>Welcome to Tic Tac Toe</h1>
     </header>
     <main>
-      <div class="opponent">
-        <h3>Choose an opponent</h3>
-        <div class="opponentChoice">
-          <label for="opponentHuman">You vs Human</label>
-          <input type="checkbox" id="opponentHuman" />
-        </div>
-
-        <div class="opponentChoice">
-          <label for="opponentAi"> You vs AI</label>
-          <input type="checkbox" id="opponentAi" />
-        </div>
-
-        <button class="start">Enter Player's name</button>
-      </div>
-
-      <div class="playerDetailsModal">
-        <form action="">
-          <div>
-            <label for="player1">Player 1</label>
-            <input type="text" id="player1" />
+      <div class="container justify-content-center align-items-center">
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-6">
+            <form action="">
+              <div class="form-group row">
+                <label for="player1" class="col-sm-3 col-form-label"
+                  >Player 1</label
+                >
+                <div class="col-sm-9">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="player1"
+                    placeholder="Enter players name"
+                  />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="player2" class="col-sm-3 col-form-label"
+                  >Player 2</label
+                >
+                <div class="col-sm-9">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="player2"
+                    placeholder="Enter players name"
+                  />
+                </div>
+              </div>
+              <h3>Choose an opponent</h3>
+              <div class="">
+                <div class="">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="flexRadioDefault"
+                      id="opponentHuman"
+                    />
+                    <label class="form-check-label" for="opponentHuman">
+                      You vs human
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="flexRadioDefault"
+                      id="opponentAi"
+                     
+                    />
+                    <label class="form-check-label" for="opponentAi"> You vs AI </label>
+                  </div>
+                </div>
+                <button class="btn btn-warning btn-lg" data-bs-toggle="modal" data-bs-target="#gameModal">Start Game</button>
+            </form>
           </div>
+        </div>
+      </div>
 
-          <div>
-            <label for="player2">Player 2</label>
-            <input type="text" id="player2" />
+      <div class="modal fade" id="gameModal" tabindex="-1" aria-labelledby="gameModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+
+            <div id="gameboardWrapper">
+              <div id="gameboard">
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+              </div>
+              <div class="startNew">
+                <!-- <button class="start">Start New Game</button> -->
+                <button class="btn btn-warning btn-lg">Start New Game</button>
+              </div>
+            </div>
           </div>
-
-          <!-- <div>
-            <label for="ai">AI</label>
-            <input type="text" id="ai" />
-          </div> -->
-
-          <button class="start">Start game</button>
-        </form>
-      </div>
-
-      <div id="gameboardWrapper">
-        <div id="gameboard">
-          <div class="box"></div>
-          <div class="box"></div>
-          <div class="box"></div>
-          <div class="box"></div>
-          <div class="box"></div>
-          <div class="box"></div>
-          <div class="box"></div>
-          <div class="box"></div>
-          <div class="box"></div>
-        </div>
-        <div class="startNew">
-          <button class="start">Start New Game</button>
         </div>
       </div>
+
     </main>
+
     <script src="/index.js"></script>
+
+    <!-- bootstrap scripts -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+      integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

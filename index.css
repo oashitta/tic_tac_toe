@@ -43,13 +43,6 @@ label {
   background-color: #edbb3e;
 }
 
-.playerDetailsModal {
-  margin: 16px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 #gameboardWrapper {
   /* display: none; */
 }
