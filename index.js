@@ -1,3 +1,8 @@
+// Outstanding tasks -
+// want to make inputing player names mandatory (required)
+// want to enable selection of opponent compulsory
+// reset game on modal close
+
 const displayWinner = (() => {
   const showWinner = (message) => {
     document.querySelector("#message").innerHTML = message;
@@ -82,8 +87,15 @@ const Game = (() => {
 
   const start = () => {
     players = [
-      createPlayer(document.querySelector("#player1").value, "X"),
-      createPlayer(document.querySelector("#player2").value, "O"),
+      // createPlayer(document.querySelector("#player1").value, "🦊"),
+      createPlayer(
+        document.querySelector("#player1").value,
+        `<div class="icon" >🦊</div>`
+      ),
+      createPlayer(
+        document.querySelector("#player2").value,
+        `<div class="icon" >🐰</div>`
+      ),
     ];
     currentPlayerIndex = 0;
     gameOver = false;

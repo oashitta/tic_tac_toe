@@ -6,6 +6,7 @@
 
 body {
   background-color: #bab78c;
+  font-family: "Lobster", cursive;
 }
 
 header {
@@ -40,14 +41,18 @@ header {
   margin-top: 24px;
   border: 1px solid black;
   /* display: grid; */
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: rgb(176, 176, 82);
   color: #fff;
   border-radius: 4px;
+}
+
+.icon {
+  font-size: 2rem;
 }
 
 .box:hover {
